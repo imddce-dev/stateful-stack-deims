@@ -2,7 +2,7 @@ version: '3.8'
 services:
   db:
     build:
-      context: ./dockerfile        
+      context: ./config        
       dockerfile: Dockerfile.postgres
     container_name: postgres_db
     environment:
