@@ -1,6 +1,5 @@
 stages:
   - build-image
-
 build_postgres_image:
   stage: build-image
   image: docker:24.0.7 
