@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  db:
+    build:
+      context: ./dockerfile        
+      dockerfile: Dockerfile.postgres
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: imddce
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD} 
+      POSTGRES_DB: deims_dev
+    network_mode: "host" # รีดประสิทธิภาพสูงสุด และรองรับการทำ Cluster/HA ข้ามเครื่องง่ายขึ้น
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  pgdata:
+    driver: local
