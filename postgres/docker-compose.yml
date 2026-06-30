@@ -6,10 +6,10 @@ services:
       dockerfile: Dockerfile.postgres
     container_name: postgres_db
     environment:
-      POSTGRES_USER: imddce
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD} 
-      POSTGRES_DB: deims_dev
-    network_mode: "host" # รีดประสิทธิภาพสูงสุด และรองรับการทำ Cluster/HA ข้ามเครื่องง่ายขึ้น
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    network_mode: "host" 
     volumes:
       - pgdata:/var/lib/postgresql/data
     restart: always
