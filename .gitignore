@@ -1,0 +1,8 @@
+# Environment files
+.env
+**/.env
+
+# NPM data
+proxy/data/
+proxy/letsencrypt/
+proxy/mysql/
