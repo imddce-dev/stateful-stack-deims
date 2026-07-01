@@ -1,8 +1,0 @@
-FROM postgres:17-alpine
-
-RUN apk add --no-cache git build-base clang19 llvm19-dev postgresql17-dev
-
-RUN git clone https://github.com/fboulnois/pg_uuidv7 /tmp/pg_uuidv7 \
-    && cd /tmp/pg_uuidv7 \
-    && make && make install \
-    && rm -rf /tmp/pg_uuidv7

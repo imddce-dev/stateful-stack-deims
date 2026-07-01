@@ -1,8 +1,39 @@
-# Environment files
+# --- Environment / secrets ---
 .env
-**/.env
+.env.*
+!.env.example
+valkey.conf
 
-# NPM data
-proxy/data/
-proxy/letsencrypt/
-proxy/mysql/
+# --- Docker volumes / persistent data ---
+data/
+mysql/
+npm/
+garage/
+redisvalkey/
+letsencrypt/
+*.pem
+*.key
+*.crt
+
+# --- Node / Bun ---
+node_modules/
+bun.lockb
+.bun/
+dist/
+build/
+*.tsbuildinfo
+
+# --- Logs ---
+*.log
+logs/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Misc ---
+*.swp
+*.bak
+.cache/
